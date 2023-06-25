@@ -1,0 +1,85 @@
+-- Atlantis
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="ues0401",
+
+    CollisionOffsetY = -0.375,
+    Defense = {
+        RegenRate = 0,
+    },
+    Economy = {
+        BuildCostEnergy = 150000,
+        BuildCostMass = 12000,
+        BuildRate = 240,
+        BuildTime = 14400,
+        BuildableCategoryMobile = {
+            'BUILTBYTIER3FACTORY UEF MOBILE AIR',
+        },
+    },
+    Intel = {
+        RadarRadius = 150,
+        SonarRadius = 150,
+        VisionRadius = 100,
+        WaterVisionRadius = 80,
+    },
+    Transport = {
+        ClassGenericUpTo = 2,
+        StorageSlots = 150,
+        TransportClass = 10,
+    },
+    Physics = {
+        Elevation = -9,
+        MaxAcceleration = 2.8,
+        MaxBrake = 2.5,
+        MaxSpeed = 2.8,
+        MaxSpeedReverse = 2.5,
+    },
+    Veteran = {
+        Level1 = 30,
+        Level2 = 60,
+        Level3 = 90,
+        Level4 = 120,
+        Level5 = 150,
+    },
+    Weapon = {
+        { --torps
+            Damage = 200,
+            DamageRadius = 0,
+            MaxRadius = 80,
+            RateOfFire = 0.5,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION',
+        },
+        {
+            Damage = 280,
+            DamageRadius = 1,
+            MaxRadius = 100,
+            RateOfFire = 1,
+        },
+        {
+            Damage = 280,        --sams unchanged
+            DamageRadius = 1,
+            MaxRadius = 100,
+            RateOfFire = 1,            
+        },
+        {
+            Damage = 280,        --sams unchanged
+            DamageRadius = 1,
+            MaxRadius = 100,
+            RateOfFire = 1,        
+        },
+        {
+            Damage = 280,        --sams unchanged
+            DamageRadius = 1,
+            MaxRadius = 100,
+            RateOfFire = 1,        
+        },
+    },
+}

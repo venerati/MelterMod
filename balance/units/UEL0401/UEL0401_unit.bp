@@ -1,0 +1,176 @@
+--Fatboy
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uel0401",
+
+
+    Veteran = {
+        Level1 = 60,
+        Level2 = 120,
+        Level3 = 180,
+        Level4 = 240,
+        Level5 = 300,
+    },
+    Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER3COMMANDER',
+        'BUILTBYTIER3ENGINEER',
+        'UEF',
+        'MOBILE',
+        'LAND',
+        'EXPERIMENTAL',
+        'INDIRECTFIRE',
+        'ARTILLERY',
+        'CONSTRUCTION',
+        'AIRSTAGINGPLATFORM',
+        --'FACTORY',
+        'NEEDMOBILEBUILD',
+        'ANTIAIR',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'DRAGBUILD',
+        --'SHOWQUEUE', --remove the queue option
+        'MOBILEFACTORY', --not yet used but you know :D
+        'NOAUTOREFUEL', --disable planes trying to refuel to it, docking is bugged if the target is moving
+        'OVERLAYMISC',
+        'OVERLAYANTIAIR',
+        'OVERLAYDEFENSE',
+        'OVERLAYANTINAVY',
+        'OVERLAYDIRECTFIRE',
+        'OVERLAYMISC',
+        'BUBBLESHIELDSPILLOVERCHECK',
+        'SNIPEMODE',
+    },
+    Defense = {
+        Health = 45000,
+        MaxHealth = 45000,
+        RegenRate = 10,
+        Shield = {
+            ShieldMaxHealth = 20000,
+            ShieldRechargeTime = 120,
+            ShieldRegenRate = 20,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 475000,
+        BuildCostMass = 38000,
+        BuildRate = 180,
+        BuildTime = 21000,
+        BuildableCategory = nil, --remove the building ability
+        BuildableCategoryMobile = {
+            'BUILTBYTIER3FACTORY UEF MOBILE LAND',
+            'BUILTBYTIER2FACTORY UEF MOBILE LAND',
+            'BUILTBYLANDTIER2FACTORY UEF MOBILE LAND',
+        },
+        MaintenanceConsumptionPerSecondEnergy = 500,
+    },
+    General = {
+        CommandCaps = {
+            RULEUCC_Repair = false, --disable build
+        },
+    },
+    Weapon = {
+        { --main cannon 1
+            Damage = 250,        --4x525dps on 100r
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'SUBCOMMANDER',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        { --main cannon 2
+            Damage = 250,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'SUBCOMMANDER',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        { --main cannon 3
+            Damage = 250,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'SUBCOMMANDER',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        { --main cannon 4
+            Damage = 250,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'SUBCOMMANDER',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        { --riot gun 1
+            Damage = 150,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'TECH1 MOBILE',
+                'TECH2 MOBILE',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        { --riot gun 2
+            Damage = 150,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'TECH1 MOBILE',
+                'TECH2 MOBILE',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        { --aa 1
+            Damage = 20,
+        },
+        { --aa 2
+            Damage = 20,
+        },
+        {   --torpedo
+            Damage = 75,
+            DamageRadius = 0,
+            MaxRadius = 40,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {   --death weapon
+        },
+    },
+}

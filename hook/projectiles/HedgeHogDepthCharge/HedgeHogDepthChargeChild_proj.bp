@@ -1,0 +1,62 @@
+ProjectileBlueprint {
+    Audio = {
+        Impact = Sound {
+            Bank = 'Impacts',
+            Cue = 'Impact_Water_Splash_AEON',
+            LodCutoff = 'Weapon_LodCutoff',
+        },
+        ImpactWater = Sound {
+            Bank = 'Impacts',
+            Cue = 'Impact_Water_Splash_AEON',
+            LodCutoff = 'Weapon_LodCutoff',
+        },
+    },
+    Categories = {
+        'AEON',
+        'PROJECTILE',
+        'ANTINAVY',
+    },
+    Defense = {
+        Health = 1000,
+    },
+    Display = {
+
+          MeshBlueprint = '/projectiles/TIFMortar01/TIFMortar01_mesh.bp',
+          StrategicIconSize = 1,
+          UniformScale = 0.1,
+    },
+    DoNotCollideList = {
+        'TORPEDO',
+    },
+    General = {
+        Category = 'Anti Navy',
+        Faction = 'Aeon',
+        Weapon = 'Harmonic Depth Charge',
+    },
+    Interface = {
+        HelpText = 0,
+    },
+    Physics = {
+        Acceleration = 1,
+        InitialSpeed = 0,
+		MaxSpeed = 2,
+		SinkSpeed = 0.05,
+        InitialSpeedRange = 0,      
+        InitialSpeedReduceDistance = 30,
+        DestroyOnWater = false,
+		StraightDownOrdinance = false,
+        StayUnderwater = false,
+        StayUpright = false,
+        TrackTarget = false,
+        TurnRate = 120,
+		UseGravity = false,
+        VelocityAlign = false,
+		DirectionX = 0,
+        DirectionXRange = 0,
+        DirectionY = 1,
+        DirectionYRange = 0,
+        DirectionZ = 0,
+        DirectionZRange = 0,
+		MaxZigZag = 0,
+    },
+}

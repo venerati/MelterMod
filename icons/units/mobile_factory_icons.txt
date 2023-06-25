@@ -1,0 +1,3 @@
+Icons are created by adding the cogs.dds over the particular unit's icon.
+Lighter unit icon's transparency should be 75%.
+Darker  unit icon's transparency should be 60%.

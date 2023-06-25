@@ -1,0 +1,78 @@
+--Tempest
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="uas0401",
+
+    CollisionOffsetY = -0.375,
+    Defense = {
+        Health = 60000,
+        MaxHealth = 60000,
+        RegenRate = 0,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_factory>Factory',
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_torpedo>Torpedoes',
+            '<LOC ability_torpedodef>Torpedo Defense',
+        },
+        UniformScale = 0.1,
+    },
+    Economy = {
+        BuildCostEnergy = 350000,
+        BuildCostMass = 24000,
+        BuildRate = 240,
+        BuildTime = 14400,
+        BuildableCategoryMobile = {
+            'BUILTBYTIER3FACTORY AEON MOBILE CONSTRUCTION',
+            'BUILTBYTIER2FACTORY AEON MOBILE CONSTRUCTION',
+            'BUILTBYTIER1FACTORY AEON MOBILE CONSTRUCTION',
+            'BUILTBYTIER2FACTORY AEON MOBILE NAVAL',
+        },
+    },
+    Intel = {
+        RadarRadius = 150,
+        SonarRadius = 150,
+        VisionRadius = 100,
+        WaterVisionRadius = 80,
+    },
+    Physics = {
+        Elevation = -9,
+        MaxAcceleration = 2.5,
+        MaxBrake = 2.5,    
+        MaxSpeed = 2.5,
+    },
+    Veteran = {
+        Level1 = 32,
+        Level2 = 64,
+        Level3 = 96,
+        Level4 = 128,
+        Level5 = 160,
+    },
+    Weapon = {
+        { --main cannon
+            RateOfFire = 0.1,
+            DamageRadius = 5,
+            Damage = 8000,
+        },
+        { --depth charges
+            Damage = 350,
+            DamageRadius = 0,
+            MaxRadius = 80,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'NAVAL MOBILE',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
+        },
+        { --torp defense
+        },
+    },
+}

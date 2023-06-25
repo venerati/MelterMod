@@ -1,0 +1,25 @@
+--Carrier Keefer
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="uas0303",
+
+    Economy = {
+        BuildCostEnergy = 40000,
+        BuildCostMass = 4000,
+        BuildRate = 180,
+        BuildTime = 12000,
+        BuildableCategoryMobile = {
+            'BUILTBYTIER3FACTORY AEON MOBILE AIR ANTINAVY',
+            'BUILTBYTIER3FACTORY AEON MOBILE AIR INTELLIGENCE',
+            'BUILTBYTIER3FACTORY AEON MOBILE AIR ANTIAIR',
+            'BUILTBYTIER3FACTORY AEON MOBILE AIR ANTIGROUND',
+        },
+    },
+    Intel = {
+        RadarRadius = 150,
+        SonarRadius = 90,
+        VisionRadius = 85,
+        WaterVisionRadius = 36,
+    },
+}
