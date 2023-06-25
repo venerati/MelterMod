@@ -15,5 +15,5 @@ end
 
 --- Formula to compute the rate of fire of an overcharge.
 DamageAsRateOfFire = function(damage)
-    return 5 * math.pow((1 + 0.0000478043964253771), damage - 500)
+    return 4 * math.pow((1 + 0.0000478043964253771), damage - 500)
 end	
